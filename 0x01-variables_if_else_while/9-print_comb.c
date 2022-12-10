@@ -2,13 +2,12 @@
 /**
  * main - prints numbers in ascending order
  * @i - first initializer
- * @j - second initializer
  *
  * Return: 0 always(sucess)
 */
 int main(void)
 {
-	int i, j;
+	int i;
 
 	for (i = 0; i < 10; i++)
 	{
