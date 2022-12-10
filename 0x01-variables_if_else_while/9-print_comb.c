@@ -10,9 +10,9 @@ int main(void)
 {
 	int l = 0;
 	int counter = 0;
-	int c  = 10;
+	int c  = 9;
 
-	while (l <= 10)
+	while (l < 10)
 	{
 		putchar((l % 10) + '0');
 		putchar(',');
