@@ -15,6 +15,10 @@ int main(void)
 	while (l < 10)
 	{
 		putchar((l % 10) + '0');
+		if (l == 9)
+		{
+			break;
+		}
 		putchar(',');
 		putchar(' ');
 		if (counter)
