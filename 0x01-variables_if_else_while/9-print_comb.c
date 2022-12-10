@@ -1,30 +1,30 @@
 #include <stdio.h>
 /**
  * main - print all possible combinations of single digit numbers
- * @l - stores first number
+ * @i - stores first number
+ * @j - second number
+ * @k - third number
  * TODO:try using only one variable
  * Return: 0 always (success)
 */
 int main(void)
 {
-	int l = 0;
+	int i, j;
 
-	while (l < 10)
+	for (i = 1; i <= 9; i++)
+{
+	for (j = 0; j < pow(10, i); j++)
 	{
-		putchar((l % 10) + '0');
-		if (l == 9)
+	int k;
+		for (k = 0; k < i; k++)
 		{
-			putchar (' ');
-			break;
+			putchar('0' + j / pow(10, k) % 10);
+			putchar(',');
+			putchar(' ');
 		}
-		putchar(',');
-		putchar(' ');
-		l++;
+	}
+	putchar('\n');
 	}
 	return (0);
 }
-
-
-
-
 
