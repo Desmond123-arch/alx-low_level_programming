@@ -13,10 +13,8 @@ int main(void)
 	{
 		for (j = 1; j < 10; j++)
 		{
-			if (j  - i <= 0)
-			{
+			if (j - i <= 0)
 				continue;
-			}
 			else
 			{
 				putchar(i + '0');
