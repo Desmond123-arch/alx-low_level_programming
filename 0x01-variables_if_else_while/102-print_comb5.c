@@ -10,7 +10,7 @@
 */
 int main(void)
 {
-	int i,j,k,l;
+	int i, j, k, l;
 
 	for (i = 0; i < 10; i++)
 	{
@@ -18,7 +18,7 @@ int main(void)
 		{
 			for (k = 0; k < 10; k++)
 			{
-				for (l = k +1; l < 10; l++)
+				for (l = 0; l < 10; l++)
 				{
 					putchar(i + '0');
 					putchar(j + '0');
@@ -28,9 +28,8 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-			}	
+			}
 		}
-
 	}
 	putchar('\n');
 	return (0);
