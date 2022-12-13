@@ -3,7 +3,7 @@
  * print_alphabet - prints the alphabet, in lowercase, followed by a new line.
  * @a - stores first letter
  *
- * 
+ *
 */
 void print_alphabet(void)
 {
@@ -15,5 +15,4 @@ void print_alphabet(void)
 		a++;
 	}
 	_putchar('\n');
-	return;
 }
