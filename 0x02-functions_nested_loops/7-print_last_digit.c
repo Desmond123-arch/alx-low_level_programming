@@ -2,7 +2,6 @@
 /**
  * print_last_digit - prints last digit
  * @n: function parameter
- * @l: last digit
  *
  * Return: last digit
 */
