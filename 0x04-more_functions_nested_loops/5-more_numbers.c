@@ -5,9 +5,10 @@
 void more_numbers(void)
 {
 	int i = 0;
-	int temp; 
+	int temp;
 	int times = 10;
-	while(times)
+
+	while (times)
 	{
 		for (i = 0; i < 15; i++)
 		{
