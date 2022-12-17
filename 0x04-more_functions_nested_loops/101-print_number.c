@@ -10,7 +10,7 @@ void print_number(int n)
 {
 	int counter = -1;
 	int power = 1;
-	unsigned  temp;
+	unsigned int temp;
 
 	if (n < 0)
 	{
