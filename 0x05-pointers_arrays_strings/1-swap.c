@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
  * swap_int - swaps the value of passed in numbers(addresses)
  * @a: first value's address is passed in
