@@ -6,10 +6,10 @@
  */
 void puts2(char *str)
 {
-	int len = _strlen(str) - 1;
+	int len = _strlen(str);
 	int i = 1;
 
-	while (len >= 0)
+	while (len > 0)
 	{
 		_putchar(*str);
 		if (i > len)
