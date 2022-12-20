@@ -7,12 +7,12 @@
 void puts2(char *str)
 {
 	int len = _strlen(str);
-	int i = 0;
+	int i = 1;
 
 	while (len > 0)
 	{
 		_putchar(*str);
-		if (i > len)
+		if (i >= len)
 		{
 			break;
 		}
