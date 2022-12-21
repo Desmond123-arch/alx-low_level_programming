@@ -1,21 +1,23 @@
 #include "main.h"
 #include "strlen.c"
+
 /**
  * _strcat - takes two parameters and concatenates them
  * @dest:string is appended to this string
  * @src:string that appends after the des
  * Return: pointer to the dest string
  */
+
 char *_strcat(char *dest, char *src)
 {
-	int len1 = _strlen(dest);
-	int len2 = _strlen(src);
+	int dest_len = _strlen(dest);
+	int src_len = _strlen(src);
 	int i;
 
-	for (i = 0; i < len2; i++)
+	for (i = 0; i < src_len; i++)
 	{
-		dest[len1] = src[i];
-		len1++;
+		dest[dest_len] = src[i];
+		dest_len++;
 	}
 	return (dest);
 }
