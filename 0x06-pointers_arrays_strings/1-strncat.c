@@ -10,7 +10,6 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int  src_len = _strlen(src);
 	int dest_len = _strlen(dest);
 	int i;
 
