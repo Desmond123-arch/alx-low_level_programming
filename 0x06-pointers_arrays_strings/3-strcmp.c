@@ -11,9 +11,6 @@
 int _strcmp(char *s1, char *s2)
 {
 	int i;
-		
-	if (_strlen(s2) > _strlen(s1))
-			return -15;
 
 	for (i = 0; i < _strlen(s1); i++)
 	{
@@ -23,7 +20,7 @@ int _strcmp(char *s1, char *s2)
 		{
 			return (15);
 		}
-		else if (s2 > s1)
+		else
 		{
 			return (-15);
 		}
