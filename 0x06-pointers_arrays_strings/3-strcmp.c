@@ -1,5 +1,6 @@
 #include "main.h"
 #include "strlen.c"
+#include "stddef.h"
 /**
  * _strcmp- compares two intergers to find if they are the same
  * @s1: pointer to first string
@@ -10,27 +11,30 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int flag = 1;
+	int i = 0;
 
-	while (*s1 == *s2)
-	{
-		s1++;
-		s2++;
-		if (*s1 == '\0' && *s2 == '\0')
+	if (s1 == s2) 
+		return (0);
+	if ((s1 == NULL) && (s2 != NULL))
+		return -15;
+	else if ((s1 != NULL) && (s2 == NULL)) 
+		return 15;
+
+	while(s1[i]) 
+	{       
+		if (s1[i] != s2[i]) 
 		{
-			flag = 0;
-			break;
+			if (s1[i] > s2[i])
+				return 15;
+			else
+				return -15;
 		}
+		++i;
 	}
-	if (*s1 == '\0' && *s2 != '\0')
-		flag = -1;
-	else if (*s1 != '\0' && *s2 == '\0')
-		flag = 1;
-	else if (*s1 > *s2)
-		flag = 1;
-	else if (*s1 < *s2)
-		flag = -1;
-
-	return (flag * 15);
+	if (s2[i]== '\0')
+	{
+		return 0;
+	}
+	else 
+		return -15;
 }
-
