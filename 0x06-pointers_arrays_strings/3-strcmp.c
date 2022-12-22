@@ -9,32 +9,28 @@
  * if not equal and s1_len > s2_len return positive value(15)
  * else if s2_len>s1_len return negative value
  */
-int _strcmp(char *s1, char *s2)
+int strCmp(char string1[], char string2[] )
 {
-	int i = 0;
+    int i = 0;
+    int flag = 0;    
+    while (flag == 0)
+    {
+        if (string1[i] > string2[i])
+        {
+            flag = 1;
+        }
+        else if (string1[i] < string2[i])
+        {
+            flag = -1;
+        }
 
-	if (s1 == s2) 
-		return (0);
-	if ((s1 == NULL) && (s2 != NULL))
-		return -15;
-	else if ((s1 != NULL) && (s2 == NULL)) 
-		return 15;
+        if (string1[i] == '\0')
+        {
+            break;
+        }
 
-	while(s1[i]) 
-	{       
-		if (s1[i] != s2[i]) 
-		{
-			if (s1[i] > s2[i])
-				return 15;
-			else
-				return -15;
-		}
-		++i;
-	}
-	if (s2[i]== '\0')
-	{
-		return 0;
-	}
-	else 
-		return -15;
+        i++;
+    }
+    return flag;
 }
+
