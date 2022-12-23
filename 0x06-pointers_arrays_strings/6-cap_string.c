@@ -1,29 +1,30 @@
 #include "main.h"
-/*
- * cap_string - capitalizes the first letter in a string
- * @s: pointer to first char in string
- * Return: char pointer to string
+/**
+ * cap_string - capitalizes the letters of a string taking seperators
+ *
+ * @s: pointer to fist letter
+ * Return:pointer to first letter
  */
-char *cap_string(char *string)
+char *cap_string(char *s)
 {
 	int i = 0;
-	while (string[i] != '\0')
+
+	if (s[0] >= 97 && s[0] <= 122)
+		s[0] = s[0] - 32;
+
+	while (s[i] != '\0')
 	{
-		if (string[0] >= 97 && string[0] <= 122)
-				string[0] = string[0] - 32;
-		if (string[i] == ' ' || string[i] == '\t' || string[i] == '\n'
-		    || string[i] == ',' || string[i] == ';' || string[i] == '.'
-		    || string[i] == '.' || string[i] == '!' || string[i] == '?'
-		    || string[i] == '"' || string[i] == '(' || string[i] == ')'
-		    || string[i] == '{' || string[i] == '}')
+		if (s[i] == ',' || s[i] == ';' || s[i] == '.' || s[i] == '!' ||
+				s[i] == '?' || s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{'
+				|| s[i] == '}' || s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
 		{
-			if(string[i + 1] >= 97  && string[i + 1] <= 122)
-				string[i + 1] = string[i + 1] - 32;
+			if (s[i + 1] >= 97 && s[i + 1] <= 122)
+			{
+				s[i + 1] = s[i + 1] - 32;
+			}
 		}
-	      i++;
+		i++;
+
 	}
-
-	return (string);
+	return (s);
 }
-
-
