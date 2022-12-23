@@ -8,6 +8,8 @@
 
 void print_number(int n)
 {
+	unsigned  int j = n;
+
 	int counter = -1;
 	int power = 1;
 	int temp;
@@ -15,10 +17,10 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar ('-');
-		n = -n;
+		j = -j;
 	}
 	temp = n;
-	if (n > 0)
+	if (j > 0)
 	{
 		while (temp > 0)
 		{
@@ -32,14 +34,14 @@ void print_number(int n)
 		}
 		while (power)
 		{
-			temp = n / power;
+			temp = j / power;
 			_putchar(temp + '0');
-			n = n - (temp * power);
+			j = j - (temp * power);
 			counter--;
 			power /= 10;
 		}
 	}
 
-	else if (n == 0)
+	else if (j == 0)
 		_putchar('0');
 }
