@@ -1,4 +1,5 @@
 #include "main.h"
+#include "5-string_toupper.c"
 /**
  * leet - encodes character with 1337
  * @s: pointer to first char of string
@@ -7,7 +8,7 @@
 char *leet(char *s)
 {
 	char *a = "AEOTL";
-	char *b = "aeotl";
+	char *l = "aeotl";
 	char *c = "43071";
 	int i = 0;
 	int j = 0;
@@ -16,11 +17,11 @@ char *leet(char *s)
 	{
 		for (j = 0; j < 4; j++)
 		{
-			if (s[i] == a[j] || s[i] == b[j])
+			if (s[i] == a[j] || s[i] == l[j])
 			{
 				s[i] = c[j];
 			}
 		}
 	}
-	return s;
+	return (s);
 }
