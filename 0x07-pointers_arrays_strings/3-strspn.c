@@ -10,13 +10,11 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int len = 0;
-	int found;
 	int i = 0;
 	int j = 0;
 
 	while (i <= _strlen(s) )
 	{
-		found = 0;
 		if (s[i] != '\0')
 		{
 			while(j <= _strlen(accept))
