@@ -17,17 +17,20 @@ unsigned int _strspn(char *s, char *accept)
 	while (i <= _strlen(s) )
 	{
 		found = 0;
-		while(j <= _strlen(accept))
+		if (s[i] != '\0')
 		{
-			if (accept[j]== s[i])
+			while(j <= _strlen(accept))
 			{
-				found = 1;
+				if (accept[j]== s[i])
+				{
+					found = 1;
+				}
+				if (!found)
+					break;
+				else
+					len++;
+				j++;
 			}
-			if (!found)
-				break;
-			else
-				len++;
-			j++;
 		}
 		i++;
 	}
