@@ -26,6 +26,8 @@ unsigned int _strspn(char *s, char *accept)
 				j++;
 			}
 		}
+		else
+			return (len);
 		i++;
 	}
 	return (len);
