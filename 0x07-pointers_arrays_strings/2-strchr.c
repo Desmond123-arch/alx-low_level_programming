@@ -1,5 +1,5 @@
 #include "main.h"
-#include "stdlib"
+#include "stdlib.h"
 /**
  * _strchr - locates a character in a string
  * @s: pointer to first letter in string
