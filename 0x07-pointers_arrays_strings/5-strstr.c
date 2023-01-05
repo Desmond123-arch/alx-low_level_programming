@@ -1,40 +1,29 @@
 #include "main.h"
 #include "strlen.c"
 /**
- * _strpbrk - searches for a string for any set of bytes
- * @s: pointer to first character in first string
- * @accept: pointer to character in string being compared
- * Return:pointer to the byte in s that matches 
- * one of the bytes in accept, 
+ * _strstr - searches for a string for any set of bytes
+ * @haystack: pointer to first character in first string
+ * @needle: pointer to character in substring
+ * Return:pointer to the begining byte in hasystack that matches
+ * one of the bytes in accept,
  * or NULL if no such byte is found
  */
-char *_strpbrk(char *haystack, char *needle)
+char *_strstr(char *haystack, char *needle)
 {
-	int i = 0;
-	int j = 0;
-	int found;
-	char *ptr;
+	int i = 0, j = 0;
 
-	while (i <= _strlen(haystack))
+	for (i = 0; i < _strlen(haystack); i++)
 	{
-		found = 0;
-		while (j <= _strlen(needle))
+		for (j = 0; j < _strlen(needle); j++)
 		{
-			if (haystack[i] == needle[j])
+			if (haystack[i + j] != needle[j])
 			{
-				found = 1;
-			}
-			if (!found)
-				break;
-			else
-			{
-				ptr = &(s[i]);
 				break;
 			}
-			j++;
 		}
-		i++;
-	}
+		if (j == _strlen(needle))
+			return (haystack + i);
 
-	return (ptr);
-}	
+	}
+	return ('\0');
+}
