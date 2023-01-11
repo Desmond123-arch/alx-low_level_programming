@@ -15,7 +15,10 @@ char *create_array(unsigned int size, char c)
 
 	if (ch == NULL)
 		return (NULL);
+	if (size == 0)
+		return (NULL);
 	memset(ch, c, size);
+
 	return (ch);
 }
 
