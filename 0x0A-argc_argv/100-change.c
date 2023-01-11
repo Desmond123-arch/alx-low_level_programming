@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if (coins <= 0)
 	{
-		printf("Error\n");
+		printf("0\n");
 		return (1);
 	}
 	/*use a for loop to loop through array */
