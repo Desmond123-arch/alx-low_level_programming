@@ -3,22 +3,20 @@
 #include "ctype.h"
 /**
  * main - calculate number of cents needed to be given to someone
- * @argc: argument counter 
- * @argv: amount of cents
+ * @argc: argument counter
+ * @argv: amount of cent
  * Return: number of cents to be given
  */
 int main(int argc, char *argv[])
 {
-	int coins;
-	int cents = 0;
+	int coins, cents = 0;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
 	coins = atoi(argv[1]);
-
 	if (coins < 0)
 	{
 		printf("Error\n");
@@ -52,8 +50,6 @@ int main(int argc, char *argv[])
 			coins = coins % 1;
 		}
 	}
-
-	printf("%d\n",cents);
+	printf("%d\n", cents);
 	return (0);
 }
-
