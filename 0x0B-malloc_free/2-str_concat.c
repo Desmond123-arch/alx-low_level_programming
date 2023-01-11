@@ -9,18 +9,22 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	/*find len of both strings */
-	size_t len = strlen(s1) + strlen(s2) + 1;
-	int i, j;
-	char *newstring = (char *)malloc(len * sizeof(char));
+	size_t len = 1;
+	int i,j;
+	char *newstring;
 
 	/*check for null cases */
-	if (newstring == NULL)
-		return NULL;
 	if (s1  == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+
+	len = strlen(s1) + strlen(s2) + 1;
+	newstring = (char *)malloc(len * sizeof(char));
+
+	if (newstring == NULL)
+		return (NULL);
+
 	/*copy strings into newstring */
 	for (i = 0; s1[i] != '\0'; i++)
 	{
