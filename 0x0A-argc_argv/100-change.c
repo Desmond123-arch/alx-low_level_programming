@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	}
 	coins = atoi(argv[1]);
 
-	if (coins < 0)
+	if (coins <= 0)
 	{
 		printf("Error\n");
 		return (1);
