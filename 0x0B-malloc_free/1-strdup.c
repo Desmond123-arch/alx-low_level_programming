@@ -9,15 +9,19 @@
  */
 char *_strdup(char *str)
 {
-	/* pointer to memory allocated */
-	char *ch = (char *) malloc(strlen(str) * sizeof(char));
+	size_t i;
+	char *ch;
 	/* check for NULL cases */
-	if (ch == NULL)
-		return (NULL);
-
 	if (str == NULL)
 		return (NULL);
-	/* use strcpy function to copy string */
+
+	for (i = 0; i < strlen(str); i++)
+	{
+		ch = (char *) malloc(sizeof(char) * (i + 1));
+		if (ch == NULL)
+			return NULL;
+	}
+
 	strcpy(ch, str);
 	return (ch);
 }
