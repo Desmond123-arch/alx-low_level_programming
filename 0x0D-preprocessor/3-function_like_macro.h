@@ -1,4 +1,10 @@
-#pragma once
-#include "math.h"
+#ifndef MAIN_H
+#define MAIN_H
+
+#include "math.h
+"
 #include "stdlib.h"
+
 #define ABS(x)  (((x >= 0)? x : -x))
+
+#endif /* MAIN_H */
