@@ -4,8 +4,8 @@
  * @d : pointer to struct dog
  */
 void free_dog(dog_t *d)
-{
+{ 
 	dog_t *dog = d;
-
-	free(dog);
+	if (dog != NULL)
+		free(dog);
 }
