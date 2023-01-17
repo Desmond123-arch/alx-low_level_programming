@@ -5,8 +5,6 @@
  */
 void free_dog(dog_t *d)
 {
-	dog_t *dog = d;
-
 	if (dog != NULL)
-		free(dog);
+		free(d);
 }
