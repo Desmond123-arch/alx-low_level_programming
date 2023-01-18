@@ -11,15 +11,16 @@ int int_index(int *array, int size, int (*cmp)(int))
 	int i;
 
 	/* check for various guards for function */
-	if (array == NULL)
-		exit(0);
-	if (size <= 0)
-		return (-1);
-	/* iterate over each member and perform the action */
-	for (i = 0; i < size; i++)
+	if (array != NULL)
 	{
-		if (cmp(array[i]))
-			return (i);
+		if (size <= 0)
+			return (-1);
+		/* iterate over each member and perform the action */
+		for (i = 0; i < size; i++)
+		{
+			if (cmp(array[i]) != 0)
+				return (i);
+		}
 	}
 	return (-1);
 }
