@@ -1,14 +1,14 @@
 #include "3-calc.h"
 /**
  * main - contains the main function
- * @argc - argument counter
- * @argv - argument vector
+ * @argc: argument counter
+ * @argv: argument vector
  * Return: 1 success
  */
-int main (__attribute__((unused))int argc, __attribute__((unused))char *argv[])
+int main(__attribute__((unused))int argc, __attribute__((unused))char *argv[])
 {
 	/**
-	 * continue this tommorrow 
+	 * continue this tommorrow
 	 */
-	return(0);
+	return (0);
 }
