@@ -34,7 +34,7 @@ void print_all(const char * const format, ...)
 					flag = 0;
 				}
 				j = 0;
-				while (str[j] != '\0' && flag)
+				while (str[j] != '\0')
 				{
 					printf("%c", str[j++]);
 				}
