@@ -1,1 +1,1 @@
-This is just basic C programming
+Examples and Implementation of variadic_functions
