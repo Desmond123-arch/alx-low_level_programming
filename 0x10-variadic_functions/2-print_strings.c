@@ -17,9 +17,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		/* va_arg will call the next string ptr */
 		string = va_arg(str, char *);
-		for (j = 0; string[j] != '\0'; j++)
+		if (string == NULL)
+			printf("(nil)");
+		else
 		{
-			printf("%c", string[j]);
+			for (j = 0; string[j] != '\0'; j++)
+			{
+				printf("%c", string[j]);
+			}
 		}
 		/* check for mutiple serapartors and separators != NULL */
 		if (separator != NULL && (i + 1) != n)
