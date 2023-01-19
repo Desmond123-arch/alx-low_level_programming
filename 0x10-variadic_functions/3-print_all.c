@@ -29,10 +29,14 @@ void print_all(const char * const format, ...)
 				str = va_arg(type, char *);
 				if (str == NULL)
 					printf("(nil)");
-				j = 0;
-				while (str[j] != '\0')
+				else
 				{
-					printf("%c", str[j++]);
+					j = 0;
+					while (str[j] != '\0')
+					{
+
+						printf("%c", str[j++]);
+					}
 				}
 				break;
 		}
