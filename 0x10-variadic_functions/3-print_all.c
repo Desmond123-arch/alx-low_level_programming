@@ -9,10 +9,9 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0, j;
 	va_list type;
 	char *str;
-	__attribute__((unused))int flag = 1;
+	int flag = 1;
 
 	va_start(type, format);
-
 	while (i < strlen(format))
 	{
 		switch (format[i])
@@ -34,7 +33,7 @@ void print_all(const char * const format, ...)
 					flag = 0;
 				}
 				j = 0;
-				while (str[j] != '\0')
+				while (str[j] != '\0' && flag)
 				{
 					printf("%c", str[j++]);
 				}
