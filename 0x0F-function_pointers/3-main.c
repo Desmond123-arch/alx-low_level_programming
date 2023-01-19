@@ -29,5 +29,5 @@ int main(__attribute__((unused))int argc, char *argv[])
 	A = atoi(argv[1]);
 	B = atoi(argv[3]);
 	printf("%d\n",operation(A, B));
-	return (operation(A, B));
+	return (0);
 }
