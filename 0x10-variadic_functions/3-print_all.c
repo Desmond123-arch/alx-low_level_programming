@@ -14,6 +14,9 @@ void print_all(const char * const format, ...)
 	va_start(type, format);
 	while (i < strlen(format))
 	{
+		if (i != 0 && format[i] != '\0')
+			printf(", ");
+		/*check particular string */
 		switch (format[i])
 		{
 			case 'c':
@@ -39,11 +42,8 @@ void print_all(const char * const format, ...)
 				}
 				break;
 		}
-		if (i != 0 && (i + 1) != strlen(format))
-		{
-			printf(", ");
-		}
 		i++;
 	}
 	printf("\n");
+	va_end(type);
 }
