@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-#include "string.h"
 /**
  * print_all - prints anything
  * @format: list of types of arguments to be passed in
@@ -23,7 +22,7 @@ void print_all(const char * const format, ...)
 				printf("%i", va_arg(type, int));
 				break;
 			case 'f':
-				printf("%f",(float) va_arg(type, double));
+				printf("%f", va_arg(type, double));
 				break;
 			case 's':
 				str = va_arg(type, char *);
