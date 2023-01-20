@@ -10,7 +10,7 @@ void print_all(const char * const format, ...)
 	char *str;
 
 	va_start(type, format);
-	while (format[i] != '\0' && format != NULL)
+	while (format && (*(format + i)))
 	{
 		/*check particular string */
 		switch (format[i])
@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 				printf("%c", (char) va_arg(type, int));
 				break;
 			case 'i':
-				printf("%i", va_arg(type, int));
+				printf("%d", va_arg(type, int));
 				break;
 			case 'f':
 				printf("%f", va_arg(type, double));
