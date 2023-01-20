@@ -6,12 +6,12 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0;
+	unsigned int i = 0, j;
 	va_list type;
 	char *str;
 
 	va_start(type, format);
-	while (i < strlen(format))
+	while (format[i] != '\0' && format != NULL)
 	{
 		/*check particular string */
 		switch (format[i])
@@ -32,11 +32,15 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 					break;
 				}
-				printf("%s", str);
+				j = 0;
+				while (str[j] != '\0')
+				{
+					printf("%c", str[j++]);
+				}
 				break;
 		}
-		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
-			format[i] == 's') && format[i] != '\0')
+		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f'
+			|| format[i] == 's') && format[i + 1] != '\0')
 			printf(", ");
 		i++;
 	}
