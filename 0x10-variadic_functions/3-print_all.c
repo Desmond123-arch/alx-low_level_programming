@@ -6,7 +6,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0, j;
+	unsigned int i = 0;
 	va_list type;
 	char *str;
 
@@ -32,11 +32,7 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 					break;
 				}
-				j = 0;
-				while (str[j] != '\0')
-				{
-					printf("%c", str[j++]);
-				}
+				printf("%s", str);
 				break;
 		}
 		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
