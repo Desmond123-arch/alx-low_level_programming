@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_all("sss", "This is", "super", NULL);
+    print_all("fff", 5.0, 3.0, NULL);
     return (0);
 }

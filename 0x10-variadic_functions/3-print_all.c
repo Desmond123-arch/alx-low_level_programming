@@ -13,16 +13,16 @@ void print_all(const char * const format, ...)
 	va_start(type, format);
 	while (i < strlen(format))
 	{
-		if (i != 0 && format[i] != '\0')
+		if (i != 0 && format[i + 1] != '\0')
 			printf(", ");
 		/*check particular string */
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c",(char) va_arg(type, int));
+				printf("%c", (char) va_arg(type, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(type, int));
+				printf("%i", va_arg(type, int));
 				break;
 			case 'f':
 				printf("%f", va_arg(type, double));
