@@ -23,7 +23,7 @@ int main(__attribute__((unused))int argc, char *argv[])
 	operation = get_op_func(argv[2]);
 	if (operation == NULL)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(99);
 	}
 	A = atoi(argv[1]);
