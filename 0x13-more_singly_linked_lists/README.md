@@ -1,1 +1,1 @@
-More complex examples on the usage of linked lists
+This is more pracitice on the usage of linked lists
