@@ -1,4 +1,5 @@
 #include  "main.h"
+#include <ctype.h>
 /**
  * binary_to_uint - converts a binary number to an int
  * @b: b is pointing to a string of 0 and 1 chars
@@ -19,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = 0; i < len; i++)
 	{
-		if (!(b[i] >= 48 && b[i] <= 58))
+		if (!isdigit(b[i]))
 		{
 			return (0);
 		}
