@@ -10,11 +10,11 @@ unsigned int _pow(unsigned int  num, unsigned int exp);
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i = 0;
-	unsigned int num = atoi(b);
+	unsigned  long num = atoi(b);
 	unsigned int len = strlen(b);
 	unsigned int sum = 0;
 
-	if (b == NULL)
+	if (b == NULL || num == 0)
 	{
 		return (0);
 	}
