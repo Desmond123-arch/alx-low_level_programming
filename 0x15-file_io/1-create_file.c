@@ -10,7 +10,7 @@ int create_file(const char *filename, char *text_content)
 	int file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	ssize_t check = 0;
 
-	if (file == -1)
+	if (file == -1 || text_content == NULL)
 	{
 		perror("fails");
 		return (-1);
