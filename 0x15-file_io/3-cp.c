@@ -54,6 +54,12 @@ void _cp(const char *file_from, const char *file_to)
 			exit(99);
 		}
 	}
+	if (bytes_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+
 	/*close file and check the return value*/
 	check_close = close(file_out);
 	if (check_close == -1)
