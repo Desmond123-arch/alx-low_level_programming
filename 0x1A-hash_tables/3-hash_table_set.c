@@ -38,7 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		/*Upadate the value */
 		if (strcmp(current_item->key, key) == 0)
 		{
-			strcpy(ht->array[index]->value, key);
+			strcpy(ht->array[index]->value,value);
 			return (1);
 		}
 		else
@@ -63,5 +63,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 void handle_collision(__attribute__((unused))hash_table_t *table, __attribute__((unused))unsigned long int index, __attribute__((unused))hash_node_t *item)
 {
     /*list */
-    return;
+    hash_node_t *temp = table->array[index];
+	table->array[index] = item;
+	item->next = temp;
 }
