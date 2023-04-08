@@ -11,6 +11,14 @@ hash_table_t *hash_table_create(unsigned long int size)
 	table->array = calloc(table->size, sizeof(hash_node_t));
 	int i = 0;
 
+	if (table == NULL)
+	{
+		return (NULL);
+	}
+	if (table->array == NULL)
+	{
+		return (NULL);
+	}
 	while (size)
 	{
 		/*set each slot of array to zero*/
@@ -18,5 +26,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 		i++;
 		size--;
 	}
-	return table;
+	return (table);
 }
