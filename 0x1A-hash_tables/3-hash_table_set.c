@@ -38,8 +38,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		else/*collisions*/
 		{
-			temp = table->array[index];
-			table->array[index] = item;
+			temp = ht->array[index];
+			ht->array[index] = item;
 			item->next = temp;
 			return (1);
 		}
