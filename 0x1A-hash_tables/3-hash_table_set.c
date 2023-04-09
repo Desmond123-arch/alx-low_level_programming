@@ -18,8 +18,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (item == NULL)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);/*calculate index*/
-	item->key = malloc(sizeof(strlen(key) + 1)); /* set the item*/
-	item->value = malloc(sizeof(strlen(value) + 1));
 	item->key = strdup(key);
 	item->value = strdup(value);
 	item->next = NULL;
@@ -31,9 +29,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		if (strcmp(current_item->key, key) == 0) /*update the value*/
+		if (current_item != NULL)
 		{
-			strcpy(ht->array[index]->value, value);
+			free(ht->array[index]->value); /* Free existing value */
+			ht->array[index]->value = strdup((char *)value);
+			free(item->key); /* Free item->key */
+			free(item->value); /* Free item->value */
+			free(item); /* Free item */
 			return (1);
 		}
 		else/*collisions*/
