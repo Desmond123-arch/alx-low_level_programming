@@ -22,8 +22,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* set item */
 	item->key = malloc(sizeof(strlen(key) + 1));
 	item->value = malloc(sizeof(strlen(value) + 1));
-	item->key = strcpy(item->key, key);
-	item->value = strcpy(item->value, value);
+	item->key = strdup(key);
+	item->value = strdup(value);
 	item->next = NULL;
 	current_item = ht->array[index];
 
@@ -32,6 +32,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		/*insert into table */
 		ht->array[index] = item;
+		return (1);
 	}
 	else
 	{
@@ -49,6 +50,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 	
 	}
+	free_hash_table(ht);
 	return (0);
 }
 
@@ -67,3 +69,4 @@ void handle_collision(__attribute__((unused))hash_table_t *table, __attribute__(
 	table->array[index] = item;
 	item->next = temp;
 }
+
