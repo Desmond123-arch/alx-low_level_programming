@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *item = malloc(sizeof(hash_node_t)); /*create an item*/
 	hash_node_t *temp;
 
-	if (strlen(key) == 0 || strlen(value) == 0)
+	if (strlen(key) == 0 || strlen(value) == 0 || ht == NULL)
 		return (0);
 	if (item == NULL)
 		return (0);
@@ -45,6 +45,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 
 	}
-	free_hash_table(ht);
 	return (0);
 }
