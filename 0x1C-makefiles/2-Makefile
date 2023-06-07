@@ -9,4 +9,3 @@ school: $(OBJ)
 	gcc $(OBJ) -o school
 
 %.o: %.c
-	$(CC) -c -o $@  $?
