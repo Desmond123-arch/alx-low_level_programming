@@ -6,6 +6,6 @@ OBJ = main.o school.o
 NAME = school
 
 school: $(OBJ)
-	gcc $(OBJ) -o school
+	$(CC) $(OBJ) -o school
 
 %.o: %.c
