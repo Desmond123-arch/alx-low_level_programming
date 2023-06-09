@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ Calcuate the perimeter of a grid
 """
+
+
 def check_surround(i, j, grid):
     w = 0
     r = len(grid)
@@ -14,6 +16,8 @@ def check_surround(i, j, grid):
     if j == c-1 or grid[i][j+1] == 0:
         w += 1
     return w
+
+
 def island_perimeter(grid):
     """ find the perimeter of a grid """
     total = 0
@@ -22,5 +26,5 @@ def island_perimeter(grid):
     for i in range(row):
         for j in range(col):
             if grid[i][j] == 1:
-                total += check_surround(i,j,grid)
+                total += check_surround(i, j, grid)
     return total
