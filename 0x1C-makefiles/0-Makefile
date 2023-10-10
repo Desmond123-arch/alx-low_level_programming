@@ -1,4 +1,0 @@
-all:school
-
-school:school.c main.c
-	gcc school.c main.c -o $@
